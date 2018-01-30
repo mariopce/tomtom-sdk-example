@@ -16,7 +16,7 @@
             </intent-filter>
     </activity>
         <-- this key is inactive, please get yours on developer.tomtom.com --> 
-        <meta-data android:name="OnlineMaps.Key" android:value="JNPAmaQed3VG8uggyc0F76CQxE9B64he" />
+        <meta-data android:name="OnlineMaps.Key" android:value="GetKeyOnDeveloper.tomtom.com" />
 
     </application>
 
