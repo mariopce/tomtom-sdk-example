@@ -20,13 +20,6 @@ allprojects {
         maven {
             url 'https://maven.tomtom.com:8443/nexus/content/repositories/releases/'
         }
-        maven {
-            url 'https://maven.tomtom.com:8443/nexus/content/repositories/snapshots/'
-            credentials {
-                username "nexus_w"
-                password "GpChV5t3"
-            }
-        }
         google()
         jcenter()
     }
