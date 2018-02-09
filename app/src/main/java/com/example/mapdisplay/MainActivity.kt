@@ -2,9 +2,11 @@ package com.example.mapdisplay
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ListView
 import com.tomtom.online.sdk.common.location.LatLng
 import com.tomtom.online.sdk.map.MapView
 import com.tomtom.online.sdk.map.MarkerBuilder
+import com.tomtom.online.sdk.map.SimpleMarkerBalloon
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
@@ -17,18 +19,18 @@ class MainActivity : AppCompatActivity() {
         mapView.addOnMapReadyCallback { tomtomMap ->
             val amsterdam = LatLng(52.36,4.88)
             tomtomMap.centerOn(amsterdam, 12)
-            tomtomMap.addMarker(MarkerBuilder(amsterdam))
+            tomtomMap.addMarker(MarkerBuilder(amsterdam).markerBalloon(SimpleMarkerBalloon("Amsterdam " + amsterdam)))
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        mapView.onResume()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        mapView.onResume()
+//    }
 
-    override fun onPause() {
-        mapView.onPause()
-        super.onPause()
-
-    }
+//    override fun onPause() {
+//        mapView.onPause()
+//        super.onPause()
+//
+//    }
 }

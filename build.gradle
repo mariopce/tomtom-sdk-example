@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0-alpha08'
+        classpath 'com.android.tools.build:gradle:3.1.0-beta1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -19,6 +19,13 @@ allprojects {
     repositories {
         maven {
             url 'https://maven.tomtom.com:8443/nexus/content/repositories/releases/'
+        }
+        maven {
+            url 'https://maven.tomtom.com:8443/nexus/content/repositories/snapshots/'
+            credentials {
+                username "nexus_w"
+                password "GpChV5t3"
+            }
         }
         google()
         jcenter()
